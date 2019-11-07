@@ -136,7 +136,7 @@ body {
 }
 body {
   width: 100%;
-  background: lightgray;
+  background: black;
 }
 header {
   width: 100%;
@@ -159,8 +159,11 @@ header nav a {
   text-align: center;
   background: grey;
   color: white;
-  border: 2px solid black;
-  margin: 1% 0.5%;
+  border: 4px solid white;
+  border-radius: 37%;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
   display: flex;
   flex-flow: row wrap;
 }
@@ -179,6 +182,8 @@ header nav a {
   border: 2px solid black;
   border-right: 0;
   padding: 1%;
+  background: lightgrey;
+  color: black;
 }
 .click-here a {
   border: 2px solid black;
@@ -190,7 +195,7 @@ header nav a {
 }
 .info {
   background: darkgrey;
-  color: ;
+  color: black;
   padding: 1%;
   width: 50%;
   display: flex;
@@ -210,10 +215,10 @@ header nav a {
 }
 .middle-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .middle-content div {
-  width: 45%;
+  width: 35%;
   background-color: grey;
   color: white;
   border: 2px solid black;
@@ -235,10 +240,28 @@ header nav a {
 .middle-content div ul li:last-child {
   padding-bottom: 0;
 }
+.middle-content div:first-child {
+  border-right: 0;
+}
+.middle-content div:last-child {
+  border-left: 0;
+}
+#pillar {
+  background: white;
+  border-top: 0;
+  border-bottom: 0;
+  width: 20%;
+}
 .bottom-content {
   display: flex;
-  justify-content: space-evenly;
-  margin: 0.5%;
+  justify-content: center;
+  margin: ;
+  padding: 0 0 2%;
+  border: 4px solid white;
+  border-radius: 37%;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
 }
 .bottom-content h2 {
   text-align: center;
@@ -247,9 +270,27 @@ header nav a {
   list-style-type: disc;
   margin-left: 6%;
 }
+.bottom-content div {
+  background-color: grey;
+  color: black;
+  width: 33.3%;
+  border: 2px solid black;
+  border-bottom: 0;
+  padding: 2%;
+  height: 100%;
+}
+.bottom-content div:first-child {
+  border-left: 0;
+  background: lightgray;
+}
+.bottom-content div:last-child {
+  border-right: 0;
+  background: darkgray;
+}
 footer {
   width: 100%;
   padding: 2% 0;
   display: flex;
   justify-content: center;
+  background-color: linear-gradient(to bottom, grey, white);
 }
