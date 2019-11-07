@@ -19,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -50,10 +49,227 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;;
+	// border: 1px solid blue;
 }
 
 html, body {
     height: 100%;
 }
+
+body {
+	width: 100%;
+	background: ;
+}
+
+// mix-ins & variables
+
+@text-color: black;
+@background-color: grey;
+@border: 2px solid black;
+.pillar(){
+	border: 4px solid black;
+	border-radius: 37%;
+}
+
+// Header
+
+header { 
+	width: 100%;
+	height: 5%;
+
+	nav {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 100%;
+		background-color: @background-color;
+		border: 2px solid black;
+		margin: 0;
+
+		a {
+			color: @text-color;
+			text-decoration: none;
+		}
+	}
+}
+
+// Top Section
+
+.top-content {
+	text-align: center;
+	background: @background-color;
+	color: @text-color;
+	.pillar();
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	display: flex;
+	flex-flow: row wrap;
+	
+	img {
+	width: 100%;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	
+}
+
+.click-here {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	border: @border;
+	border-right: 0;
+	padding: 1%;
+	background: lightgrey;
+	color: black;
+
+	a {
+		border: 2px solid black;
+		width: 25%;
+		border-radius: 5%;
+		margin: 1% 0 0;
+		padding: 1% 0;
+		background: lightgray;
+	}
+}
+
+.info {
+	background: darkgrey;
+	color: black;
+	padding: 1%;
+	width: 50%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	border: @border;
+	border-left: 0;
+
+	h1 {
+		margin: 1%;
+	}
+
+	div {
+		margin: 4% 2%;
+
+		a {
+			margin: 0 10%;
+			height: auto;
+			width: auto;
+		}
+	}
+}
+
+// Middle Section
+
+.middle-content {
+	display: flex;
+	justify-content: center;
+	// padding: 5% 0;
+	
+
+	div {
+		width: 35%;
+		background-color: @background-color;
+		color: @text-color;
+		border: @border;
+		padding: 2% .5% ;
+
+		h2 {
+			text-align: center;
+			margin: 1% 0;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			
+
+			li {
+				text-align: center;
+				border-top: @border;
+				padding: 2% 0;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		&:first-child {
+			border-right: 0;
+		}
+
+		&:last-child {
+			border-left: 0;
+		}
+	}
+}
+
+#pillar {
+	background: black;
+	border-top: 0;
+	border-bottom: 0;
+	width: 20%
+}
+
+// Bottom Content
+
+.bottom-content {
+	display: flex;
+	justify-content: center;
+	padding: 0 0 2%;
+	.pillar();
+	border-bottom: 0;
+	border-right: 0;
+	border-left: 0;
+
+	h2 {
+		text-align: center;
+	}
+
+	ul {
+		list-style-type: disc;
+		margin-left: 6% 
+	}
+
+	div {
+		background-color: grey;
+		color: black;
+		width: 33.3%;
+		border: @border;
+		border-bottom: 0;
+		padding: 2%;
+		height: 100%;
+z
+		&:first-child {
+			border-left: 0;
+			border-left: 0;
+			background: lightgray;
+		}
+
+		&:last-child {
+			border-right: 0;
+			background: darkgray;
+		}
+	}
+}
+
+// Footer
+footer {
+	width: 100%;
+	padding: 2% 0;;
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to bottom,  white, grey);
+}
+
+
+
 
